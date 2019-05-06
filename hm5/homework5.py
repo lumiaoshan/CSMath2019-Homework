@@ -15,6 +15,7 @@ from sklearn.datasets.samples_generator import make_blobs
 def generate_data():
     return make_blobs(n_samples=300, centers=2, n_features=2, cluster_std=2)
 
+
 def gauss_kernel(X, y):
     kernel = euclidean_distances(X, y) ** 2
     kernel = kernel * (-1 / (0.01 ** 2))
